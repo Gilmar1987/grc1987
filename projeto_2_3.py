@@ -19,6 +19,12 @@ def cria_aquivos():
     arquivo.write("Alemanha\n")
     arquivo.write("Andorra\n")
     arquivo.write("Angola\n")
+    arquivo.write("Áustria\n")
+    arquivo.write("Belgica\n")
+    arquivo.write("Chipre\n")
+    arquivo.write("Dinamarca\n")
+    arquivo.write("Filândia\n")
+    arquivo.write("Hungria\n")
 
     arquivo.close()
     # Criando Arquivo de Resposta " Resposta.txt "
@@ -36,6 +42,13 @@ def cria_aquivos():
     arquivo_r.write("berlim\n".lower())
     arquivo_r.write("andorra-a-velha\n".lower())
     arquivo_r.write("luanda\n".lower())
+    arquivo_r.write("viena\n".lower())
+    arquivo_r.write("Bruxelas\n".lower())
+    arquivo_r.write("Nicósia\n".lower())
+    arquivo_r.write("copenhague\n".lower())
+    arquivo_r.write("helsinki\n".lower())
+    arquivo_r.write("budapeste\n".lower())
+
     arquivo_r.close()
 
     arquivo_alt = open("alternativas.txt", "w" )
@@ -52,6 +65,12 @@ def cria_aquivos():
     arquivo_alt.write("moscou saraievo Berlim f\n".lower())
     arquivo_alt.write("Argel andorra-a-velha doa d\n".lower())
     arquivo_alt.write("Luanda laundé jamena d\n".lower())
+    arquivo_alt.write("tallin viena dublin m\n".lower())
+    arquivo_alt.write("Bruxelas Mônaco Varsóvia m\n".lower())
+    arquivo_alt.write("Oslo Praga Nicósia d\n")
+    arquivo_alt.write("Copenhague Belfast Bucareste m\n".lower())
+    arquivo_alt.write("Estocolmo helsinki Edimburgo d\n".lower())
+    arquivo_alt.write("Budapeste Amsterdã Dublin d\n".lower())
 
     arquivo_alt.close()
 
@@ -90,7 +109,7 @@ def add_paises():
              arq.write(linha)
             
             print()
-            print('Agora digite as três alternativas para a\nresposta com duas erradas e a correta\ne o grau de dificudade\nF: facil\nM: medio\nD: dificio')
+            print('Agora digite as três alternativas para a\nresposta com duas erradas e a correta\ne o grau de dificudade\nF: Fácil\nM: Médio\nD: Difícil')
             alt1=input('digite a primeira alternativa: ')
             alt2=input('digite a segunda alternativa: ')
             alt3=input('digite a terceira alternativa: ')
@@ -198,6 +217,7 @@ def iniciar_jogo():
         
 
         time.sleep(1)
+        os.system('clear')
         print("="*100)
         #finaliza após 5 perguntas
         if(len(perguntas) > 4):
